@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSIPS Raipur — AI Admissions & Enquiry Portal | Shri Shankaracharya Institute of Professional Studies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emeraldDeep: '#0f3d3e',
+            emeraldMid: '#185456',
+            sandstone: '#faf8f5',
+            sandCard: '#f3efe8',
+            ssipsOrange: '#f2711c',
+            terracotta: '#d95d39',
+            saffron: '#e08e16',
+            ink: '#1a2421'
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #faf8f5;
+      color: #1a2421;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .bento-card {
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+    }
+    .bento-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 36px -12px rgba(15, 61, 62, 0.12);
+    }
+
+    .chat-scroll::-webkit-scrollbar {
+      width: 5px;
+    }
+    .chat-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .chat-scroll::-webkit-scrollbar-thumb {
+      background: #cbd5d1;
+      border-radius: 999px;
+    }
+
+    @keyframes pulseDot {
+      0%, 80%, 100% { transform: scale(0.7); opacity: 0.4; }
+      40% { transform: scale(1.1); opacity: 1; }
+    }
+    .typing-dot {
+      animation: pulseDot 1.3s infinite ease-in-out;
+    }
+    .typing-dot:nth-child(2) { animation-delay: 0.16s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.32s; }
+  </style>
+</head>
+<body class="antialiased selection:bg-ssipsOrange selection:text-white">
+
+  <!-- Official Institutional Header with Properly Styled Embedded Logo -->
+  <header class="sticky top-0 z-40 bg-white border-b border-stone-200/90 shadow-sm">
+    <!-- Top Institutional Strip -->
+    <div class="bg-emeraldDeep text-stone-100 text-[11px] sm:text-xs py-1.5 px-4">
+      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+        <span class="font-medium tracking-wide">
+          <span class="text-amber-300 font-semibold">Campus:</span> Mujgahan, Old Dhamtari Road, Raipur (C.G.) — 492015
+        </span>
+        <div class="flex items-center gap-4">
+          <span class="hidden sm:inline text-stone-300">Managed by Shri Gangajali Education Society</span>
+          <span class="inline-flex items-center gap-1.5 text-amber-300 font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            Admissions Open 2026–27
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main White Header Bar -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col lg:flex-row items-center justify-between gap-3">
+      <a href="#" class="flex items-center justify-center lg:justify-start w-full lg:w-auto gap-3.5 group">
+        <!-- Properly Framed Square/Rounded Logo Container -->
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white border border-stone-200/90 shadow-sm p-1 flex items-center justify-center shrink-0 overflow-hidden">
+          <img
+            src="https://ssips.edu.in/assets/images/brochure-logo.png?v1"
+            alt="SSIPS Raipur Logo"
+            class="w-full h-full object-contain"
+          />
+        </div>
+
+        <div class="text-left">
+          <div class="text-ssipsOrange font-extrabold text-sm sm:text-lg leading-tight">
+            Shri Shankaracharya Institute of Professional Studies
+          </div>
+          <div class="text-[11px] font-bold text-stone-800">
+            Managed by Shri Gangajali Education Society • Mujgahan, Raipur (C.G.)
+          </div>
+          <div class="text-[10px] text-stone-600 leading-tight hidden sm:block">
+            Affiliated to AICTE, New Delhi • Dept. of Higher Education, Govt. of C.G. • Affiliated to PRSU, Raipur
+          </div>
+        </div>
+      </a>
+
+      <!-- Navigation & Quick Action -->
+      <div class="flex items-center justify-between lg:justify-end w-full lg:w-auto gap-5 pt-1 lg:pt-0 border-t lg:border-t-0 border-stone-100">
+        <nav class="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm font-semibold text-stone-700">
+          <a href="#ai-counselor" class="hover:text-ssipsOrange transition-colors">AI Assistant</a>
+          <a href="#programs" class="hover:text-ssipsOrange transition-colors">Programs</a>
+          <a href="#campus-bento" class="hover:text-ssipsOrange transition-colors">Campus &amp; Bus</a>
+          <a href="#enquiry-form" class="hover:text-ssipsOrange transition-colors">Enquire</a>
+        </nav>
+
+        <a href="#enquiry-form" class="inline-flex items-center gap-1.5 bg-ssipsOrange hover:bg-terracotta text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl shadow-sm transition-all shrink-0">
+          <span>Apply 2026–27</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-8 pb-12 lg:pt-12 lg:pb-16">
+    <div class="absolute inset-0 pointer-events-none opacity-[0.04]" style="background-image: radial-gradient(#0f3d3e 1.25px, transparent 1.25px); background-size: 24px 24px;"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- Left Hero Content (7 cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 text-ssipsOrange text-xs font-bold">
+              AICTE Approved • PRSU Raipur Affiliated
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emeraldDeep/10 border border-emeraldDeep/20 text-emeraldDeep text-xs font-semibold">
+              Institution's Innovation Council (IIC)
+            </span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-4xl lg:text-[44px] font-bold text-emeraldDeep leading-[1.15] tracking-tight">
+            Shape Your Career at <span class="text-ssipsOrange">SSIPS Raipur</span> with Real AI Guidance.
+          </h1>
+
+          <p class="text-stone-600 text-base sm:text-lg leading-relaxed max-w-2xl">
+            Managed by <strong class="text-ink">Shri Gangajali Education Society</strong> and approved by the Dept. of Higher Education, Govt. of Chhattisgarh. Ask <strong class="text-emeraldDeep">SSIPS Mitra AI</strong> anything in <strong>English, Hindi, or Hinglish</strong> about BBA, BCA, B.Com, B.Sc, M.Com, PGDCA, career paths, or campus life at Mujgahan.
+          </p>
+
+          <!-- Institutional Key Metrics Bento Strip -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+            <div class="bg-white border border-stone-200/90 rounded-2xl p-3.5 shadow-sm">
+              <div class="text-xs font-medium text-stone-500">University</div>
+              <div class="font-serif text-lg font-bold text-emeraldDeep mt-0.5">PRSU Raipur</div>
+              <div class="text-[11px] text-ssipsOrange font-semibold mt-0.5">AICTE &amp; Govt. of C.G.</div>
+            </div>
+            <div class="bg-white border border-stone-200/90 rounded-2xl p-3.5 shadow-sm">
+              <div class="text-xs font-medium text-stone-500">Campus Location</div>
+              <div class="font-serif text-lg font-bold text-emeraldDeep mt-0.5">Mujgahan</div>
+              <div class="text-[11px] text-stone-500 mt-0.5">Old Dhamtari Rd, Raipur</div>
+            </div>
+            <div class="bg-white border border-stone-200/90 rounded-2xl p-3.5 shadow-sm">
+              <div class="text-xs font-medium text-stone-500">Transport</div>
+              <div class="font-serif text-lg font-bold text-emeraldDeep mt-0.5">25+ Routes</div>
+              <div class="text-[11px] text-stone-500 mt-0.5">Raipur &amp; Bhilai-Durg</div>
+            </div>
+            <div class="bg-white border border-stone-200/90 rounded-2xl p-3.5 shadow-sm">
+              <div class="text-xs font-medium text-stone-500">Scholarships</div>
+              <div class="font-serif text-lg font-bold text-emeraldDeep mt-0.5">C.G. Govt &amp; Merit</div>
+              <div class="text-[11px] text-stone-500 mt-0.5">SC/ST/OBC &amp; 85%+ Merit</div>
+            </div>
+          </div>
+
+          <!-- Quick Topic Triggers -->
+          <div class="pt-1">
+            <p class="text-xs font-semibold uppercase tracking-wider text-stone-500 mb-2.5">Ask SSIPS Mitra AI Anything (English / Hinglish):</p>
+            <div class="flex flex-wrap gap-2">
+              <button onclick="askQuickQuestion('Compare BCA and BBA courses at SSIPS Raipur, which is best?')" class="px-3.5 py-2 rounded-xl bg-white hover:bg-emeraldDeep hover:text-white border border-stone-200 text-xs font-semibold text-emeraldDeep transition-all shadow-sm">
+                Compare BCA vs BBA
+              </button>
+              <button onclick="askQuickQuestion('What is the fee structure and installment policy at SSIPS Mujgahan?')" class="px-3.5 py-2 rounded-xl bg-white hover:bg-emeraldDeep hover:text-white border border-stone-200 text-xs font-semibold text-emeraldDeep transition-all shadow-sm">
+                Fees &amp; Installments
+              </button>
+              <button onclick="askQuickQuestion('Share the Raipur and Bhilai bus routes for SSIPS Mujgahan campus.')" class="px-3.5 py-2 rounded-xl bg-white hover:bg-emeraldDeep hover:text-white border border-stone-200 text-xs font-semibold text-emeraldDeep transition-all shadow-sm">
+                Raipur–Bhilai Bus Routes
+              </button>
+              <button onclick="askQuickQuestion('What scholarships are available for Chhattisgarh students?')" class="px-3.5 py-2 rounded-xl bg-white hover:bg-emeraldDeep hover:text-white border border-stone-200 text-xs font-semibold text-emeraldDeep transition-all shadow-sm">
+                C.G. Scholarships
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Interactive AI Assistant Card (5 cols) -->
+        <div id="ai-counselor" class="lg:col-span-5">
+          <div class="bg-white rounded-3xl border border-stone-200/90 shadow-xl overflow-hidden flex flex-col h-[550px]">
+            <!-- Chat Header with Your Embedded Logo -->
+            <div class="bg-emeraldDeep text-white px-5 py-4 flex items-center justify-between border-b border-emeraldMid">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-white p-1 flex items-center justify-center shadow-sm shrink-0 overflow-hidden">
+                  <img
+                    src="https://ssips.edu.in/assets/images/brochure-logo.png?v1"
+                    alt="SSIPS Raipur Logo"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h2 class="font-bold text-sm sm:text-base leading-none">SSIPS Mitra AI</h2>
+                    <span id="aiModeBadge" class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-emerald-400/20 text-emerald-300 border border-emerald-400/40 rounded-full">Smart AI</span>
+                  </div>
+                  <p class="text-[11px] text-stone-300 mt-1">Ask Anything • English / Hindi / Hinglish</p>
+                </div>
+              </div>
+              <button onclick="resetChat()" title="Clear Chat" class="text-xs text-stone-300 hover:text-white px-2.5 py-1.5 rounded-lg hover:bg-white/10 transition">
+                Reset
+              </button>
+            </div>
+
+            <!-- Messages Area -->
+            <div id="chatMessages" class="flex-1 p-4 overflow-y-auto chat-scroll space-y-3.5 bg-sandstone/70">
+              <div class="flex items-start gap-2.5">
+                <div class="w-7 h-7 rounded-lg bg-ssipsOrange text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">AI</div>
+                <div class="bg-white border border-stone-200/80 rounded-2xl rounded-tl-sm px-3.5 py-2.5 text-xs sm:text-sm text-stone-700 shadow-sm space-y-1.5 max-w-[88%]">
+                  <p class="font-semibold text-emeraldDeep">Jai Johar &amp; Welcome to SSIPS Raipur!</p>
+                  <p>I am <strong>SSIPS Mitra AI</strong>, your virtual admissions counselor. Ask me anything in <strong>English, Hindi, or Hinglish</strong>:</p>
+                  <ul class="text-xs text-stone-600 list-disc pl-4 space-y-0.5">
+                    <li>Course comparisons (BCA vs BBA, B.Com, B.Sc, M.Com, PGDCA)</li>
+                    <li>Fees, semester installments &amp; C.G. scholarships</li>
+                    <li>PRSU admission documents, placements &amp; bus routes</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Suggestion Pills inside Chat -->
+            <div class="px-3.5 py-2 bg-white border-t border-stone-100 flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+              <button onclick="askQuickQuestion('Compare BCA and B.Sc Computer Science at SSIPS Raipur.')" class="shrink-0 text-[11px] font-medium px-2.5 py-1 rounded-full bg-orange-50 text-ssipsOrange hover:bg-ssipsOrange hover:text-white transition">
+                + BCA vs B.Sc CS
+              </button>
+              <button onclick="askQuickQuestion('What documents are required for PRSU admission at SSIPS?')" class="shrink-0 text-[11px] font-medium px-2.5 py-1 rounded-full bg-stone-100 text-stone-700 hover:bg-emeraldDeep hover:text-white transition">
+                + Required Documents
+              </button>
+              <button onclick="askQuickQuestion('Tell me about placements and IIC startup cell at SSIPS.')" class="shrink-0 text-[11px] font-medium px-2.5 py-1 rounded-full bg-stone-100 text-stone-700 hover:bg-emeraldDeep hover:text-white transition">
+                + Placements &amp; IIC
+              </button>
+            </div>
+
+            <!-- Chat Input Form -->
+            <form id="chatForm" class="p-3 bg-white border-t border-stone-200 flex items-center gap-2">
+              <input
+                id="chatInput"
+                type="text"
+                placeholder="Ask anything (e.g. Compare BCA and BBA, fees, bus)..."
+                class="flex-1 text-xs sm:text-sm bg-sandstone border border-stone-200 rounded-xl px-3.5 py-2.5 focus:outline-none focus:border-ssipsOrange focus:bg-white transition"
+                required
+              />
+              <button
+                type="submit"
+                id="sendBtn"
+                class="bg-ssipsOrange hover:bg-terracotta text-white p-2.5 rounded-xl transition shadow-sm shrink-0 disabled:opacity-50"
+                aria-label="Send Message"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Programs Section -->
+  <section id="programs" class="py-12 lg:py-16 bg-white border-y border-stone-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-ssipsOrange">PRSU Raipur &amp; AICTE Approved</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-emeraldDeep mt-1">Academic Programs at SSIPS Mujgahan</h2>
+        </div>
+
+        <div class="inline-flex bg-sandCard p-1 rounded-xl border border-stone-200 self-start">
+          <button onclick="filterPrograms('all', this)" class="prog-filter active-filter px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emeraldDeep text-white transition">
+            All Programs (6)
+          </button>
+          <button onclick="filterPrograms('ug', this)" class="prog-filter px-3.5 py-1.5 rounded-lg text-xs font-bold text-stone-600 hover:text-emeraldDeep transition">
+            Undergraduate (UG)
+          </button>
+          <button onclick="filterPrograms('pg', this)" class="prog-filter px-3.5 py-1.5 rounded-lg text-xs font-bold text-stone-600 hover:text-emeraldDeep transition">
+            Postgraduate &amp; Diploma
+          </button>
+        </div>
+      </div>
+
+      <div id="programsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- BCA -->
+        <div class="program-card bento-card bg-sandstone border border-stone-200/90 rounded-2xl p-5 flex flex-col justify-between" data-level="ug">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-lg bg-orange-100 text-ssipsOrange text-[11px] font-bold">UG • 3 Years (NEP)</span>
+              <span class="text-xs font-semibold text-stone-500">120 Seats</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-emeraldDeep">Bachelor of Computer Applications (BCA)</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              Hands-on training in Python, Java, Web Development, DBMS, AI/ML fundamentals, and live software projects in modern computer labs.
+            </p>
+            <div class="mt-4 pt-3 border-t border-stone-200/80 space-y-1 text-xs text-stone-600">
+              <div><strong class="text-ink">Eligibility:</strong> 10+2 in any stream (Maths/CS preferred)</div>
+              <div><strong class="text-ink">Affiliation:</strong> Pt. Ravishankar Shukla University</div>
+            </div>
+          </div>
+          <div class="mt-5 flex items-center gap-2">
+            <button onclick="askQuickQuestion('Tell me about BCA subjects, fees, and career opportunities at SSIPS Raipur.')" class="flex-1 py-2 px-3 rounded-xl bg-white hover:bg-emeraldDeep hover:text-white border border-stone-200 text-xs font-bold text-emeraldDeep transition">
+              Ask AI Details
+            </button>
+            <button onclick="selectCourseForEnquiry('BCA (Bachelor of Computer Applications)')" class="py-2 px-3.5 rounded-xl bg-ssipsOrange hover:bg-terracotta text-white text-xs font-bold transition">
+              Enquire
+            </button>
+          </div>
+        </div>
+
+        <!-- BBA -->
+        <div class="program-card bento-card bg-sandstone border border-stone-200/90 rounded-2xl p-5 flex flex-col justify-between" data-level="ug">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-lg bg-orange-100 text-ssipsOrange text-[11px] font-bold">UG • 3 Years (AICTE)</span>
+              <span class="text-xs font-semibold text-stone-500">120 Seats</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-emeraldDeep">Bachelor of Business Administration (BBA)</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              Industry-aligned management program covering Marketing, Finance, HR, Digital Business, and startup incubation via SSIPS IIC cell.
+            </p>
+            <div class="mt-4 pt-3 border-t border-stone-200/80 space-y-1 text-xs text-stone-600">
+              <div><strong class="text-ink">Eligibility:</strong> 10+2 in any discipline from recognized board</div>
+              <div><strong class="text-ink">Approval:</strong> AICTE New Delhi &amp; PRSU Raipur</div>
+            </div>
+          </div>
+          <div class="mt-5 flex items-center gap-2">
+            <button onclick="askQuickQuestion('Tell me about BBA specializations, fees, and MBA/corporate scope at SSIPS Raipur.')" class="flex-1 py-2 px-3 rounded-xl bg-white hover:bg-emeraldDeep hover:text-white border border-stone-200 text-xs font-bold text-emeraldDeep transition">
+              Ask AI Details
+            </button>
+            <button onclick="selectCourseForEnquiry('BBA (Bachelor of Business Administration)')" class="py-2 px-3.5 rounded-xl bg-ssipsOrange hover:bg-terracotta text-white text-xs font-bold transition">
+              Enquire
+            </button>
+          </div>
+        </div>
+
+        <!-- B.Com -->
+        <div class="program-card bento-card bg-sandstone border border-stone-200/90 rounded-2xl p-5 flex flex-col justify-between" data-level="ug">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-lg bg-emeraldDeep/10 text-emeraldDeep text-[11px] font-bold">UG • 3 Years (NEP)</span>
+              <span class="text-xs font-semibold text-stone-500">180 Seats</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-emeraldDeep">B.Com (Plain &amp; Computer Applications)</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              Comprehensive foundation in Accounting, Taxation, GST, Tally Prime, Corporate Law, and Financial Analytics for CA/CS &amp; banking aspirants.
+            </p>
+            <div class="mt-4 pt-3 border-t border-stone-200/80 space-y-1 text-xs text-stone-600">
+              <div><strong class="text-ink">Eligibility:</strong> 10+2 (Commerce / Science / Arts)</div>
+              <div><strong class="text-ink">Tracks:</strong> B.Com Plain &amp; B.Com Computer Application</div>
+            </div>
+          </div>
+          <div class="mt-5 flex items-center gap-2">
+            <button onclick="askQuickQuestion('Compare B.Com Plain vs B.Com Computer Applications at SSIPS Raipur.')" class="flex-1 py-2 px-3 rounded-xl bg-white hover:bg-emeraldDeep hover:text-white border border-stone-200 text-xs font-bold text-emeraldDeep transition">
+              Ask AI Details
+            </button>
+            <button onclick="selectCourseForEnquiry('B.Com (Plain / Computer Applications)')" class="py-2 px-3.5 rounded-xl bg-ssipsOrange hover:bg-terracotta text-white text-xs font-bold transition">
+              Enquire
+            </button>
+          </div>
+        </div>
+
+        <!-- B.Sc -->
+        <div class="program-card bento-card bg-sandstone border border-stone-200/90 rounded-2xl p-5 flex flex-col justify-between" data-level="ug">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-lg bg-emeraldDeep/10 text-emeraldDeep text-[11px] font-bold">UG • 3 Years (NEP)</span>
+              <span class="text-xs font-semibold text-stone-500">90 Seats</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-emeraldDeep">B.Sc (Computer Science / IT / Maths)</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              Blend of core sciences and modern computing including Data Structures, Operating Systems, Electronics, and Mathematical Modeling.
+            </p>
+            <div class="mt-4 pt-3 border-t border-stone-200/80 space-y-1 text-xs text-stone-600">
+              <div><strong class="text-ink">Eligibility:</strong> 10+2 with Mathematics / Science stream</div>
+              <div><strong class="text-ink">Labs:</strong> Dedicated CS, Physics &amp; Electronics Labs</div>
+            </div>
+          </div>
+          <div class="mt-5 flex items-center gap-2">
+            <button onclick="askQuickQuestion('Tell me about B.Sc Computer Science/IT eligibility and future scope at SSIPS.')" class="flex-1 py-2 px-3 rounded-xl bg-white hover:bg-emeraldDeep hover:text-white border border-stone-200 text-xs font-bold text-emeraldDeep transition">
+              Ask AI Details
+            </button>
+            <button onclick="selectCourseForEnquiry('B.Sc (Computer Science / IT)')" class="py-2 px-3.5 rounded-xl bg-ssipsOrange hover:bg-terracotta text-white text-xs font-bold transition">
+              Enquire
+            </button>
+          </div>
+        </div>
+
+        <!-- M.Com -->
+        <div class="program-card bento-card bg-sandstone border border-stone-200/90 rounded-2xl p-5 flex flex-col justify-between" data-level="pg">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-lg bg-amber-100 text-amber-800 text-[11px] font-bold">PG • 2 Years (4 Sem)</span>
+              <span class="text-xs font-semibold text-stone-500">60 Seats</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-emeraldDeep">Master of Commerce (M.Com)</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              Advanced postgraduate study in Financial Management, International Business, Research Methodology, and Corporate Tax Planning.
+            </p>
+            <div class="mt-4 pt-3 border-t border-stone-200/80 space-y-1 text-xs text-stone-600">
+              <div><strong class="text-ink">Eligibility:</strong> B.Com or BBA graduate from recognized university</div>
+              <div><strong class="text-ink">Career Path:</strong> Finance, Academia (NET/SET), Banking</div>
+            </div>
+          </div>
+          <div class="mt-5 flex items-center gap-2">
+            <button onclick="askQuickQuestion('Tell me about M.Com eligibility, fees, and career options at SSIPS Raipur.')" class="flex-1 py-2 px-3 rounded-xl bg-white hover:bg-emeraldDeep hover:text-white border border-stone-200 text-xs font-bold text-emeraldDeep transition">
+              Ask AI Details
+            </button>
+            <button onclick="selectCourseForEnquiry('M.Com (Master of Commerce)')" class="py-2 px-3.5 rounded-xl bg-ssipsOrange hover:bg-terracotta text-white text-xs font-bold transition">
+              Enquire
+            </button>
+          </div>
+        </div>
+
+        <!-- PGDCA -->
+        <div class="program-card bento-card bg-sandstone border border-stone-200/90 rounded-2xl p-5 flex flex-col justify-between" data-level="pg">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-lg bg-amber-100 text-amber-800 text-[11px] font-bold">PG Diploma • 1 Year</span>
+              <span class="text-xs font-semibold text-stone-500">60 Seats</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-emeraldDeep">Post Graduate Diploma in Computer Applications (PGDCA)</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              Job-oriented 1-year PRSU diploma ideal for graduates targeting C.G. State Government exams, IT operations, and office automation roles.
+            </p>
+            <div class="mt-4 pt-3 border-t border-stone-200/80 space-y-1 text-xs text-stone-600">
+              <div><strong class="text-ink">Eligibility:</strong> Graduation in any stream (BA/B.Com/B.Sc)</div>
+              <div><strong class="text-ink">Recognition:</strong> Valid for C.G. Govt &amp; PSU recruitments</div>
+            </div>
+          </div>
+          <div class="mt-5 flex items-center gap-2">
+            <button onclick="askQuickQuestion('Is PGDCA from SSIPS valid for Chhattisgarh Government jobs like CG Vyapam and PSC?')" class="flex-1 py-2 px-3 rounded-xl bg-white hover:bg-emeraldDeep hover:text-white border border-stone-200 text-xs font-bold text-emeraldDeep transition">
+              Ask AI Details
+            </button>
+            <button onclick="selectCourseForEnquiry('PGDCA (1-Year Diploma)')" class="py-2 px-3.5 rounded-xl bg-ssipsOrange hover:bg-terracotta text-white text-xs font-bold transition">
+              Enquire
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campus Life, Transport & Placements Bento Grid -->
+  <section id="campus-bento" class="py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <span class="text-xs font-bold uppercase tracking-widest text-ssipsOrange">Life at Mujgahan Campus</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-emeraldDeep mt-1">Why Students Across Chhattisgarh Choose SSIPS</h2>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-5">
+        <!-- Card 1: Placements & T&P Cell (7 cols) -->
+        <div class="md:col-span-7 bento-card bg-emeraldDeep text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-amber-300 text-xs font-bold">Training, Placement &amp; IIC Cell</span>
+            <h3 class="font-serif text-2xl font-bold mt-3">Dedicated Career Readiness &amp; Corporate Drives</h3>
+            <p class="text-stone-300 text-sm mt-2 leading-relaxed">
+              From aptitude bootcamps and mock interviews to campus recruitment drives with IT, BFSI, and retail leaders across Raipur, Pune, Bengaluru, and Hyderabad.
+            </p>
+          </div>
+          <div class="grid grid-cols-3 gap-3 mt-6 pt-5 border-t border-white/15">
+            <div>
+              <div class="font-serif text-2xl font-bold text-amber-300">85%+</div>
+              <div class="text-xs text-stone-300">Placement Assistance</div>
+            </div>
+            <div>
+              <div class="font-serif text-2xl font-bold text-amber-300">60+</div>
+              <div class="text-xs text-stone-300">Recruiting Partners</div>
+            </div>
+            <div>
+              <div class="font-serif text-2xl font-bold text-amber-300">IIC 4★</div>
+              <div class="text-xs text-stone-300">Startup &amp; Innovation Hub</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Transport & Connectivity (5 cols) -->
+        <div class="md:col-span-5 bento-card bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-orange-50 text-ssipsOrange text-xs font-bold">Fleet &amp; Connectivity</span>
+            <h3 class="font-serif text-xl font-bold text-emeraldDeep mt-3">Raipur, Durg &amp; Bhilai Bus Network</h3>
+            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+              GPS-enabled college buses covering Telibandha, Shankar Nagar, Tatibandh, Bhatagaon, Naya Raipur, Kumhari, Bhilai &amp; Durg.
+            </p>
+          </div>
+          <button onclick="askQuickQuestion('Share the bus stops and transport details for SSIPS Mujgahan campus.')" class="mt-6 w-full py-2.5 px-4 rounded-xl bg-sandCard hover:bg-emeraldDeep hover:text-white text-emeraldDeep text-xs font-bold transition">
+            Check Bus Stops via AI →
+          </button>
+        </div>
+
+        <!-- Card 3: Scholarships (5 cols) -->
+        <div class="md:col-span-5 bento-card bg-sandCard border border-stone-200/90 rounded-3xl p-6 sm:p-8">
+          <span class="inline-block px-3 py-1 rounded-full bg-emeraldDeep/10 text-emeraldDeep text-xs font-bold">Financial Aid</span>
+          <h3 class="font-serif text-xl font-bold text-emeraldDeep mt-3">C.G. Post-Matric &amp; Merit Scholarships</h3>
+          <ul class="mt-3 space-y-2 text-xs sm:text-sm text-stone-700">
+            <li class="flex items-start gap-2">
+              <span class="text-ssipsOrange font-bold">✓</span>
+              <span><strong>C.G. Govt. Post-Matric Scholarship</strong> for SC, ST &amp; OBC domicile students.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-ssipsOrange font-bold">✓</span>
+              <span><strong>Shri Gangajali Merit Waiver</strong> for 85%+ scorers in Class 12th board exams.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-ssipsOrange font-bold">✓</span>
+              <span><strong>Easy Semester Installments</strong> &amp; bank education loan documentation support.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Campus Infrastructure (7 cols) -->
+        <div class="md:col-span-7 bento-card bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8">
+          <span class="inline-block px-3 py-1 rounded-full bg-orange-50 text-ssipsOrange text-xs font-bold">Lush Green Campus • Mujgahan</span>
+          <h3 class="font-serif text-xl font-bold text-emeraldDeep mt-3">Modern Labs, Digital Library &amp; Vibrant Student Clubs</h3>
+          <div class="grid sm:grid-cols-2 gap-4 mt-4 text-xs sm:text-sm text-stone-600">
+            <div class="p-3.5 rounded-2xl bg-sandstone border border-stone-200/70">
+              <div class="font-bold text-emeraldDeep">High-Speed IT &amp; Coding Labs</div>
+              <p class="mt-1 text-xs">Dedicated workstations with 1 Gbps fiber internet, Linux/Windows environments, and project incubation zones.</p>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-sandstone border border-stone-200/70">
+              <div class="font-bold text-emeraldDeep">Sports, NSS &amp; Cultural Fests</div>
+              <p class="mt-1 text-xs">Cricket &amp; basketball grounds, indoor games, active NSS unit, and annual techno-cultural youth festivals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct Admissions Enquiry Form -->
+  <section id="enquiry-form" class="py-12 lg:py-16 bg-white border-t border-stone-200/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-sandstone border border-stone-200 rounded-3xl p-6 sm:p-10 shadow-sm">
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-5 space-y-4">
+            <span class="inline-block px-3 py-1 rounded-full bg-orange-100 text-ssipsOrange text-xs font-bold">2026–27 Admission Desk</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-emeraldDeep leading-tight">
+              Request a Callback or Campus Visit
+            </h2>
+            <p class="text-sm text-stone-600 leading-relaxed">
+              Submit your enquiry below. Our admissions counselor at <strong>SSIPS Mujgahan, Raipur</strong> will connect with you regarding PRSU portal registration, fee structure, and scholarship eligibility.
+            </p>
+
+            <div class="p-4 rounded-2xl bg-white border border-stone-200 space-y-2.5 text-xs text-stone-700">
+              <div class="font-bold text-emeraldDeep text-sm">Admissions Office Address</div>
+              <p><strong>Shri Shankaracharya Institute of Professional Studies (SSIPS)</strong><br/>Mujgahan, Old Dhamtari Road, Near Sejbahar, Raipur, Chhattisgarh — 492015</p>
+              <p><strong>Managed by:</strong> Shri Gangajali Education Society</p>
+              <p><strong>Office Hours:</strong> Mon – Sat, 9:30 AM to 5:00 PM</p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <form id="admissionEnquiryForm" class="bg-white p-6 rounded-2xl border border-stone-200/90 space-y-4 shadow-sm">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-stone-700 mb-1">Student Full Name *</label>
+                  <input type="text" id="studentName" required placeholder="e.g. Aarav Verma" class="w-full text-sm bg-sandstone border border-stone-200 rounded-xl px-3.5 py-2.5 focus:outline-none focus:border-ssipsOrange focus:bg-white" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-stone-700 mb-1">Mobile Number (WhatsApp) *</label>
+                  <input type="tel" id="studentPhone" required pattern="[0-9]{10}" placeholder="10-digit mobile number" class="w-full text-sm bg-sandstone border border-stone-200 rounded-xl px-3.5 py-2.5 focus:outline-none focus:border-ssipsOrange focus:bg-white" />
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-stone-700 mb-1">Program Interested In *</label>
+                  <select id="courseSelect" required class="w-full text-sm bg-sandstone border border-stone-200 rounded-xl px-3.5 py-2.5 focus:outline-none focus:border-ssipsOrange focus:bg-white">
+                    <option value="">-- Select Program --</option>
+                    <option value="BCA (Bachelor of Computer Applications)">BCA (Bachelor of Computer Applications)</option>
+                    <option value="BBA (Bachelor of Business Administration)">BBA (Bachelor of Business Administration)</option>
+                    <option value="B.Com (Plain / Computer Applications)">B.Com (Plain / Computer Applications)</option>
+                    <option value="B.Sc (Computer Science / IT)">B.Sc (Computer Science / IT)</option>
+                    <option value="M.Com (Master of Commerce)">M.Com (Master of Commerce)</option>
+                    <option value="PGDCA (1-Year Diploma)">PGDCA (1-Year Diploma)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-stone-700 mb-1">City / District *</label>
+                  <input type="text" id="studentCity" required placeholder="e.g. Raipur, Bhilai, Dhamtari" class="w-full text-sm bg-sandstone border border-stone-200 rounded-xl px-3.5 py-2.5 focus:outline-none focus:border-ssipsOrange focus:bg-white" />
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-4 pt-1 text-xs text-stone-700">
+                <label class="inline-flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" id="needBus" class="rounded text-ssipsOrange focus:ring-ssipsOrange" />
+                  <span>Need College Bus Facility</span>
+                </label>
+                <label class="inline-flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" id="needScholarship" class="rounded text-ssipsOrange focus:ring-ssipsOrange" />
+                  <span>Check C.G. Govt / Merit Scholarship</span>
+                </label>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-stone-700 mb-1">Specific Question (Optional)</label>
+                <textarea id="studentQuery" rows="2" placeholder="Ask about fee installments, PRSU form dates, or hostel..." class="w-full text-sm bg-sandstone border border-stone-200 rounded-xl px-3.5 py-2 focus:outline-none focus:border-ssipsOrange focus:bg-white"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3 px-5 rounded-xl bg-ssipsOrange hover:bg-terracotta text-white font-bold text-sm shadow-md transition">
+                Submit Admission Enquiry
+              </button>
+            </form>
+
+            <!-- Confirmation Box -->
+            <div id="enquiryConfirmation" class="hidden bg-emeraldDeep text-white p-6 rounded-2xl shadow-lg space-y-3">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-400/20 text-emerald-300 text-xs font-bold">
+                ✓ Enquiry Registered Successfully
+              </div>
+              <h3 class="font-serif text-xl font-bold" id="confirmTitle">Thank you!</h3>
+              <p class="text-xs sm:text-sm text-stone-200 leading-relaxed" id="confirmBody"></p>
+              <div class="pt-2 flex flex-wrap gap-2">
+                <button onclick="resetEnquiryForm()" class="px-4 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-xs font-bold transition">
+                  Submit Another Enquiry
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Institutional Footer with Properly Framed Embedded Logo -->
+  <footer class="bg-emeraldDeep text-stone-300 py-10 border-t border-emeraldMid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div class="flex items-start gap-3.5">
+        <div class="w-12 h-12 rounded-xl bg-white p-1 flex items-center justify-center shadow-sm shrink-0 overflow-hidden">
+          <img
+            src="https://ssips.edu.in/assets/images/brochure-logo.png?v1"
+            alt="SSIPS Raipur Logo"
+            class="w-full h-full object-contain"
+          />
+        </div>
+
+        <div>
+          <div class="text-white font-bold text-base">Shri Shankaracharya Institute of Professional Studies (SSIPS)</div>
+          <div class="text-xs text-amber-300 font-medium mt-0.5">Managed by Shri Gangajali Education Society • Mujgahan, Raipur (C.G.)</div>
+          <div class="text-[11px] text-stone-400 mt-1">
+            Affiliated to AICTE, New Delhi | Approved by Dept. of Higher Education, Govt. of Chhattisgarh | Affiliated to Pt. Ravishankar Shukla University, Raipur
+          </div>
+        </div>
+      </div>
+      <div class="text-xs text-stone-400 md:text-right">
+        <div>© 2026 SSIPS Raipur. All Rights Reserved.</div>
+        <div class="mt-1">AI Admissions &amp; Enquiry Assistant</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Generative AI + Language-Aware Intelligent Fallback Engine -->
+  <script>
+    const chatMessages = document.getElementById('chatMessages');
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+    const sendBtn = document.getElementById('sendBtn');
+
+    // Optional: Paste your Google Gemini API key here for full live LLM responses
+    const GEMINI_API_KEY = "";
+
+    const SYSTEM_PROMPT = `You are "SSIPS Mitra AI", the official, warm, helpful, and highly intelligent AI Admissions & Academic Counselor for Shri Shankaracharya Institute of Professional Studies (SSIPS), located at Mujgahan, Old Dhamtari Road, Raipur, Chhattisgarh (492015).
+
+Institutional Facts:
+- Management: Managed by Shri Gangajali Education Society.
+- Approvals & Affiliations: Affiliated to AICTE (New Delhi), Approved by Dept. of Higher Education (Govt. of Chhattisgarh), Affiliated to Pt. Ravishankar Shukla University (PRSU), Raipur, and recognized under Institution's Innovation Council (IIC).
+- Programs Offered (2026-27):
+  1. BCA (Bachelor of Computer Applications) - 3 Years (NEP), 120 seats, Eligibility: 10+2 any stream (Maths/CS preferred), Approx. fee ₹28,000 - ₹34,000/yr.
+  2. BBA (Bachelor of Business Administration) - 3 Years (AICTE approved), 120 seats, Eligibility: 10+2 any stream, Approx. fee ₹28,000 - ₹34,000/yr.
+  3. B.Com (Plain & Computer Applications) - 3 Years (NEP), 180 seats, Eligibility: 10+2 pass, Approx. fee ₹18,000 - ₹24,000/yr.
+  4. B.Sc (Computer Science / IT / Maths) - 3 Years (NEP), 90 seats, Eligibility: 10+2 Science/Maths, Approx. fee ₹18,000 - ₹24,000/yr.
+  5. M.Com (Master of Commerce) - 2 Years (4 Semesters), 60 seats, Eligibility: B.Com/BBA graduate, Approx. fee ₹16,000 - ₹20,000/yr.
+  6. PGDCA (Post Graduate Diploma in Computer Applications) - 1 Year, 60 seats, Eligibility: Graduate in any stream, valid for Chhattisgarh Govt jobs (CG Vyapam/PSC), Approx. fee ₹16,000 - ₹20,000/yr.
+- Scholarships: C.G. Govt. Post-Matric Scholarship (SC/ST/OBC domicile), Shri Gangajali Merit Waiver (85%+ in 12th), semester-wise installments & education loan support.
+- Transport: 25+ GPS-enabled buses covering Raipur (Telibandha, Shankar Nagar, Jaistambh, Tatibandh, Bhatagaon, Pachpedi Naka, Naya Raipur) and Durg-Bhilai (Power House, Supela, Nehru Nagar, Kumhari).
+- Placements & Campus: Training & Placement Cell (85%+ placement assistance, 60+ recruiters like TCS, Wipro, Infosys BPM, HDFC, ICICI), IIC Startup Cell, high-speed coding labs, library, sports, NSS, and nearby hostel/PG support.
+
+Strict Language Rule:
+- Reply in the EXACT language of the user's message. If the user writes in English, respond strictly in clear, professional English. If the user writes in Hindi or Hinglish, respond in friendly Hindi/Hinglish.
+- Answer strictly what the user asked without adding unrelated courses.`;
+
+    let conversationHistory = [];
+
+    function formatRichText(text) {
+      return text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/^\s*[\-\*]\s+(.*)$/gm, '• $1')
+        .replace(/\n/g, '<br/>');
+    }
+
+    function detectHinglish(text) {
+      const hinglishWords = ['kya', 'hai', 'hain', 'kaunsa', 'kaunsi', 'kaise', 'kitni', 'kitna', 'batao', 'bataiye', 'karu', 'karen', 'chahiye', 'mein', 'aur', 'ke', 'ki', 'ka', 'se', 'nahi', 'accha', 'rahega', 'kaha', 'kahan', 'mujhe', 'apna', 'sarkari', 'naukri'];
+      const words = text.toLowerCase().split(/\W+/);
+      return words.some(w => hinglishWords.includes(w));
+    }
+
+    function getSmartFallbackResponse(userText) {
+      const q = userText.toLowerCase();
+      const isHinglish = detectHinglish(userText);
+
+      // 1. Exact Comparison: BCA vs BBA
+      if (q.includes('bca') && q.includes('bba')) {
+        if (isHinglish) {
+          return `<strong>BCA vs BBA at SSIPS Raipur — Kaunsa Best Hai?</strong><br/><br/>
+          • <strong>BCA (Bachelor of Computer Applications):</strong> Best hai agar aapko <strong>Software Development, Coding (Python, Java, Web, AI)</strong> aur IT sector mein career banana hai.<br/>
+          • <strong>BBA (Bachelor of Business Administration — AICTE Approved):</strong> Best hai agar aapko <strong>Business Management, Marketing, Finance, HR, MBA</strong> ya khud ka startup karna hai.<br/><br/>
+          <strong>Verdict:</strong> Dono courses 3 saal ke hain aur 10+2 (kisi bhi stream) ke baad kar sakte hain. Tech/Coding pasand hai toh <strong>BCA</strong> chunein, aur Business/Leadership pasand hai toh <strong>BBA</strong>.`;
+        }
+        return `<strong>BCA vs BBA at SSIPS Raipur — Which One is Best for You?</strong><br/><br/>
+        • <strong>BCA (Bachelor of Computer Applications):</strong> Best if you want a career in <strong>Software Development, Coding (Python, Java, Web/AI), Data Analytics, or the IT industry</strong>.<br/>
+        • <strong>BBA (Bachelor of Business Administration — AICTE Approved):</strong> Best if you aim for <strong>Corporate Management, Marketing, Finance, HR, Entrepreneurship, or an MBA</strong>.<br/><br/>
+        <strong>Verdict:</strong> Both are 3-year degrees open to 10+2 students from any stream. Choose <strong>BCA</strong> if you enjoy technology and programming, or <strong>BBA</strong> if you prefer business strategy and leadership.`;
+      }
+
+      // 2. Exact Comparison: BCA vs B.Sc
+      if (q.includes('bca') && (q.includes('bsc') || q.includes('b.sc'))) {
+        if (isHinglish) {
+          return `<strong>BCA vs B.Sc (CS/IT) at SSIPS Raipur:</strong><br/><br/>
+          • <strong>BCA:</strong> Practical software development, programming languages aur application building par focused hai (10+2 kisi bhi stream se eligible).<br/>
+          • <strong>B.Sc (CS/IT):</strong> Computer Science ke saath core Physics/Mathematics concepts padhaye jaate hain (10+2 mein Maths/Science zaroori hai).`;
+        }
+        return `<strong>BCA vs B.Sc (CS/IT) at SSIPS Raipur:</strong><br/><br/>
+        • <strong>BCA:</strong> Focused heavily on practical software engineering, app/web development, and IT industry skills (open to 10+2 from any stream).<br/>
+        • <strong>B.Sc (CS/IT):</strong> Combines computer science with pure science/mathematics foundations (requires 10+2 with Maths/Science).`;
+      }
+
+      // 3. Exact Comparison: B.Com Plain vs Computer Applications
+      if (q.includes('bcom') || q.includes('b.com')) {
+        if (isHinglish) {
+          return `<strong>B.Com at SSIPS Raipur (Plain vs Computer Applications):</strong><br/>
+          • <strong>B.Com Plain:</strong> Accounting, Taxation, GST, Auditing aur CA/CS/Banking preparation ke liye best.<br/>
+          • <strong>B.Com Computer Applications:</strong> Commerce subjects ke saath Tally Prime, DBMS, Web Basics aur IT tools ki practical training milti hai.<br/>
+          • <strong>Eligibility &amp; Fees:</strong> 10+2 pass (any stream) • Approx. ₹18,000 – ₹24,000/year.`;
+        }
+        return `<strong>B.Com at SSIPS Raipur (Plain vs Computer Applications):</strong><br/>
+        • <strong>B.Com Plain:</strong> Ideal for core Accounting, Taxation, GST, Auditing, and CA/CS or banking exam preparation.<br/>
+        • <strong>B.Com Computer Applications:</strong> Combines commerce fundamentals with Tally Prime, DBMS, and practical IT skills.<br/>
+        • <strong>Eligibility &amp; Fees:</strong> 10+2 pass (any stream) • Approx. ₹18,000 – ₹24,000/year.`;
+      }
+
+      // 4. Individual Program Details: BCA
+      if (q.includes('bca')) {
+        return isHinglish
+          ? `<strong>BCA at SSIPS Raipur (PRSU Affiliated):</strong><br/>• <strong>Duration &amp; Seats:</strong> 3 Years (NEP) • 120 Seats<br/>• <strong>Eligibility:</strong> 10+2 in any stream (Maths/CS preferred)<br/>• <strong>Key Skills:</strong> Python, Java, Web Development, DBMS, AI/ML basics<br/>• <strong>Approx. Fee:</strong> ₹28,000 – ₹34,000/year (semester installments available).`
+          : `<strong>BCA at SSIPS Raipur (PRSU Affiliated):</strong><br/>• <strong>Duration &amp; Seats:</strong> 3 Years (NEP) • 120 Seats<br/>• <strong>Eligibility:</strong> 10+2 in any stream (Maths/CS preferred)<br/>• <strong>Key Skills:</strong> Python, Java, Web Development, DBMS, AI/ML fundamentals<br/>• <strong>Approx. Fee:</strong> ₹28,000 – ₹34,000/year (semester installments available).`;
+      }
+
+      // 5. Individual Program Details: BBA
+      if (q.includes('bba')) {
+        return isHinglish
+          ? `<strong>BBA at SSIPS Raipur (AICTE Approved &amp; PRSU Affiliated):</strong><br/>• <strong>Duration &amp; Seats:</strong> 3 Years • 120 Seats<br/>• <strong>Eligibility:</strong> 10+2 in any discipline<br/>• <strong>Focus Areas:</strong> Marketing, Finance, HR, Digital Business &amp; IIC Startup Incubation<br/>• <strong>Approx. Fee:</strong> ₹28,000 – ₹34,000/year.`
+          : `<strong>BBA at SSIPS Raipur (AICTE Approved &amp; PRSU Affiliated):</strong><br/>• <strong>Duration &amp; Seats:</strong> 3 Years • 120 Seats<br/>• <strong>Eligibility:</strong> 10+2 in any discipline<br/>• <strong>Focus Areas:</strong> Marketing, Finance, HR, Digital Business &amp; IIC Startup Incubation<br/>• <strong>Approx. Fee:</strong> ₹28,000 – ₹34,000/year.`;
+      }
+
+      // 6. PGDCA / M.Com / B.Sc individual queries
+      if (q.includes('pgdca')) {
+        return isHinglish
+          ? `<strong>PGDCA at SSIPS Raipur (1-Year PRSU Diploma):</strong><br/>• <strong>Eligibility:</strong> Graduation in any stream (BA/B.Com/B.Sc)<br/>• <strong>Govt Job Validity:</strong> Haan, PRSU Raipur se affiliated hone ke kaaran yeh <strong>CG Vyapam, CGPSC aur sabhi C.G. Govt exams</strong> ke liye 100% valid hai.<br/>• <strong>Approx. Fee:</strong> ₹16,000 – ₹20,000.`
+          : `<strong>PGDCA at SSIPS Raipur (1-Year PRSU Diploma):</strong><br/>• <strong>Eligibility:</strong> Graduation in any stream (BA/B.Com/B.Sc)<br/>• <strong>Recognition:</strong> Affiliated to Pt. Ravishankar Shukla University (PRSU), making it 100% valid for <strong>CG Vyapam, CGPSC, and Chhattisgarh State Government recruitments</strong>.<br/>• <strong>Approx. Fee:</strong> ₹16,000 – ₹20,000.`;
+      }
+
+      if (q.includes('mcom') || q.includes('m.com')) {
+        return isHinglish
+          ? `<strong>M.Com at SSIPS Raipur (2 Years / 4 Semesters):</strong><br/>• <strong>Eligibility:</strong> B.Com or BBA graduate<br/>• <strong>Focus:</strong> Financial Management, Corporate Tax, International Business &amp; Research<br/>• <strong>Approx. Fee:</strong> ₹16,000 – ₹20,000/year.`
+          : `<strong>M.Com at SSIPS Raipur (2 Years / 4 Semesters):</strong><br/>• <strong>Eligibility:</strong> B.Com or BBA graduate from a recognized university<br/>• <strong>Focus:</strong> Financial Management, Corporate Tax, International Business &amp; Research<br/>• <strong>Approx. Fee:</strong> ₹16,000 – ₹20,000/year.`;
+      }
+
+      if (q.includes('bsc') || q.includes('b.sc')) {
+        return isHinglish
+          ? `<strong>B.Sc (CS / IT / Maths) at SSIPS Raipur (3 Years):</strong><br/>• <strong>Eligibility:</strong> 10+2 with Mathematics / Science stream<br/>• <strong>Labs:</strong> Dedicated Computer Science, Physics &amp; Electronics labs<br/>• <strong>Approx. Fee:</strong> ₹18,000 – ₹24,000/year.`
+          : `<strong>B.Sc (CS / IT / Maths) at SSIPS Raipur (3 Years):</strong><br/>• <strong>Eligibility:</strong> 10+2 with Mathematics / Science stream<br/>• <strong>Labs:</strong> Dedicated Computer Science, Physics &amp; Electronics laboratories<br/>• <strong>Approx. Fee:</strong> ₹18,000 – ₹24,000/year.`;
+      }
+
+      // 7. All Courses Overview
+      if (q.includes('course') || q.includes('program') || q.includes('eligib')) {
+        return isHinglish
+          ? `<strong>SSIPS Raipur ke Sabhi Programs (PRSU &amp; AICTE Approved):</strong><br/>• <strong>UG Courses (3 Yrs):</strong> BCA, BBA (AICTE Approved), B.Com (Plain &amp; Computer App.), B.Sc (CS/IT/Maths)<br/>• <strong>PG &amp; Diploma:</strong> M.Com (2 Yrs) aur PGDCA (1 Yr)<br/><em>Kis course ki detail jaanna chahte hain?</em>`
+          : `<strong>All Programs Offered at SSIPS Raipur (PRSU &amp; AICTE Approved):</strong><br/>• <strong>Undergraduate (3 Yrs):</strong> BCA, BBA (AICTE Approved), B.Com (Plain &amp; Computer App.), B.Sc (CS/IT/Maths)<br/>• <strong>Postgraduate &amp; Diploma:</strong> M.Com (2 Yrs) and PGDCA (1 Yr)<br/><em>Which program would you like to explore in detail?</em>`;
+      }
+
+      // 8. Fees Query
+      if (q.includes('fee') || q.includes('fees') || q.includes('cost') || q.includes('installment')) {
+        return isHinglish
+          ? `<strong>SSIPS Mujgahan Fee Structure (2026–27 Approx.):</strong><br/>• <strong>B.Com / B.Sc:</strong> ₹18,000 – ₹24,000/year<br/>• <strong>BCA / BBA:</strong> ₹28,000 – ₹34,000/year<br/>• <strong>M.Com / PGDCA:</strong> ₹16,000 – ₹20,000/year<br/>✓ Semester-wise installments aur C.G. Govt / Merit Scholarships available hain.`
+          : `<strong>SSIPS Mujgahan Fee Structure (2026–27 Approx.):</strong><br/>• <strong>B.Com / B.Sc:</strong> ₹18,000 – ₹24,000/year<br/>• <strong>BCA / BBA:</strong> ₹28,000 – ₹34,000/year<br/>• <strong>M.Com / PGDCA:</strong> ₹16,000 – ₹20,000/year<br/>✓ Easy semester-wise installments and C.G. Govt / Merit Scholarships are available.`;
+      }
+
+      // 9. Bus / Location Query
+      if (q.includes('bus') || q.includes('transport') || q.includes('route') || q.includes('bhilai') || q.includes('durg') || q.includes('raipur') || q.includes('mujgahan') || q.includes('location')) {
+        return isHinglish
+          ? `<strong>Campus Location &amp; Bus Network:</strong><br/>• <strong>Address:</strong> SSIPS Campus, Mujgahan, Old Dhamtari Road (near Sejbahar), Raipur.<br/>• <strong>Raipur Stops:</strong> Telibandha, Shankar Nagar, Jaistambh Chowk, Tatibandh, Bhatagaon, Pachpedi Naka, Naya Raipur.<br/>• <strong>Durg–Bhilai Stops:</strong> Power House, Supela, Nehru Nagar, Kumhari.`
+          : `<strong>Campus Location &amp; Bus Network:</strong><br/>• <strong>Address:</strong> SSIPS Campus, Mujgahan, Old Dhamtari Road (near Sejbahar), Raipur.<br/>• <strong>Raipur Routes:</strong> Telibandha, Shankar Nagar, Jaistambh Chowk, Tatibandh, Bhatagaon, Pachpedi Naka, and Naya Raipur.<br/>• <strong>Durg–Bhilai Routes:</strong> Power House, Supela, Nehru Nagar, and Kumhari.`;
+      }
+
+      // 10. Scholarships Query
+      if (q.includes('scholarship') || q.includes('sc') || q.includes('st') || q.includes('obc') || q.includes('merit') || q.includes('waiver')) {
+        return isHinglish
+          ? `<strong>Scholarships at SSIPS Raipur:</strong><br/>1. <strong>C.G. Govt. Post-Matric Scholarship:</strong> SC, ST aur OBC domicile students ke liye tuition fee reimbursement.<br/>2. <strong>Shri Gangajali Merit Scholarship:</strong> 12th board mein 85%+ marks lane par special fee waiver.<br/>3. <strong>Education Loan Support:</strong> Bank loan ke liye bonafide &amp; fee structure documents turant milte hain.`
+          : `<strong>Scholarships at SSIPS Raipur:</strong><br/>1. <strong>Chhattisgarh Govt. Post-Matric Scholarship:</strong> Full/partial tuition reimbursement for eligible SC, ST, and OBC domicile students.<br/>2. <strong>Shri Gangajali Merit Scholarship:</strong> Special fee concession for students scoring 85%+ in Class 12th.<br/>3. <strong>Education Loan Support:</strong> Complete bonafide and fee-structure documentation for nationalized banks.`;
+      }
+
+      // 11. Documents & Admission Process
+      if (q.includes('document') || q.includes('admission') || q.includes('apply') || q.includes('prsu') || q.includes('process')) {
+        return isHinglish
+          ? `<strong>Admission Process &amp; Required Documents:</strong><br/>• <strong>Process:</strong> Neeche diya gaya Enquiry Form bharein aur <strong>PRSU Raipur</strong> online portal par SSIPS select karein.<br/>• <strong>Documents:</strong> 10th &amp; 12th Marksheets, TC, Migration Certificate (other boards), Caste &amp; C.G. Domicile Certificate, Aadhaar Card, aur 4 passport photos.`
+          : `<strong>Admission Process &amp; Required Documents:</strong><br/>• <strong>Process:</strong> Submit the Enquiry Form below and register on the <strong>PRSU Raipur</strong> online admission portal selecting SSIPS.<br/>• <strong>Documents Required:</strong> 10th &amp; 12th Marksheets, Transfer Certificate (TC), Migration Certificate (if outside CGBSE), Caste &amp; C.G. Domicile Certificates, Aadhaar Card, and 4 passport photos.`;
+      }
+
+      // 12. Placements & IIC
+      if (q.includes('placement') || q.includes('job') || q.includes('company') || q.includes('package') || q.includes('iic') || q.includes('startup')) {
+        return isHinglish
+          ? `<strong>Placements &amp; Innovation (IIC):</strong><br/>• SSIPS mein dedicated <strong>Training &amp; Placement Cell</strong> (85%+ placement assistance) aur <strong>Institution's Innovation Council (IIC)</strong> hai.<br/>• TCS, Wipro, Infosys BPM, HDFC, ICICI aur Raipur ki leading companies campus drives mein aati hain.`
+          : `<strong>Placements &amp; Innovation (IIC):</strong><br/>• SSIPS features a dedicated <strong>Training &amp; Placement Cell</strong> (85%+ placement assistance) and an active <strong>Institution's Innovation Council (IIC)</strong>.<br/>• Top recruiters include TCS, Wipro, Infosys BPM, HDFC, ICICI, and leading regional enterprises.`;
+      }
+
+      // 13. Hostel
+      if (q.includes('hostel') || q.includes('pg') || q.includes('stay') || q.includes('accommodation')) {
+        return isHinglish
+          ? `<strong>Hostel &amp; PG Facilities:</strong><br/>Mujgahan aur Old Dhamtari Road ke paas boys aur girls ke liye separate supervised hostels aur verified PGs available hain (Wi-Fi, mess aur 24/7 security ke saath).`
+          : `<strong>Hostel &amp; Accommodation:</strong><br/>Separate supervised hostel facilities and verified student PGs are available near Mujgahan and Old Dhamtari Road with hygienic mess, Wi-Fi, and 24/7 security.`;
+      }
+
+      // 14. Default Response (Strictly Language-Matched)
+      return isHinglish
+        ? `<strong>SSIPS Mitra AI:</strong> Main Shri Shankaracharya Institute of Professional Studies (SSIPS), Mujgahan, Raipur ke <strong>BCA, BBA, B.Com, B.Sc, M.Com aur PGDCA</strong> courses, fees, scholarships, PRSU admission documents aur Raipur–Bhilai bus routes ke baare mein aapki madad kar sakta hoon. Aap kis topic par jaankari chahte hain?`
+        : `<strong>SSIPS Mitra AI:</strong> I can help you with programs (<strong>BCA, BBA, B.Com, B.Sc, M.Com, PGDCA</strong>), fee structure, PRSU admission documents, scholarships, placements, and Raipur–Bhilai bus routes at <strong>SSIPS Mujgahan, Raipur</strong>. What would you like to know?`;
+    }
+
+    async function fetchAIResponse(userText) {
+      if (!GEMINI_API_KEY || !GEMINI_API_KEY.trim()) {
+        throw new Error('No local API key configured — using smart language-matched engine');
+      }
+
+      conversationHistory.push({
+        role: 'user',
+        parts: [{ text: userText }]
+      });
+
+      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+
+      const payload = {
+        systemInstruction: {
+          parts: [{ text: SYSTEM_PROMPT }]
+        },
+        contents: conversationHistory.slice(-10),
+        generationConfig: {
+          temperature: 0.6,
+          maxOutputTokens: 450
+        }
+      };
+
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error(`API status ${response.status}`);
+      }
+
+      const data = await response.json();
+      const rawReply = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+      if (!rawReply) {
+        throw new Error('Empty AI candidate');
+      }
+
+      conversationHistory.push({
+        role: 'model',
+        parts: [{ text: rawReply }]
+      });
+
+      return formatRichText(rawReply);
+    }
+
+    function appendMessage(htmlContent, sender = 'bot') {
+      const wrapper = document.createElement('div');
+      wrapper.className = sender === 'user'
+        ? 'flex items-start justify-end gap-2'
+        : 'flex items-start gap-2.5';
+
+      if (sender === 'user') {
+        const safeText = htmlContent.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        wrapper.innerHTML = `
+          <div class="bg-emeraldDeep text-white rounded-2xl rounded-tr-sm px-3.5 py-2.5 text-xs sm:text-sm shadow-sm max-w-[85%]">
+            ${safeText}
+          </div>
+        `;
+      } else {
+        wrapper.innerHTML = `
+          <div class="w-7 h-7 rounded-lg bg-ssipsOrange text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">AI</div>
+          <div class="bg-white border border-stone-200/80 rounded-2xl rounded-tl-sm px-3.5 py-2.5 text-xs sm:text-sm text-stone-700 shadow-sm space-y-1 max-w-[88%] leading-relaxed">
+            ${htmlContent}
+          </div>
+        `;
+      }
+
+      chatMessages.appendChild(wrapper);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function showTyping() {
+      const typingDiv = document.createElement('div');
+      typingDiv.id = 'typingIndicator';
+      typingDiv.className = 'flex items-start gap-2.5';
+      typingDiv.innerHTML = `
+        <div class="w-7 h-7 rounded-lg bg-ssipsOrange text-white flex items-center justify-center text-xs font-bold shrink-0">AI</div>
+        <div class="bg-white border border-stone-200/80 rounded-2xl px-4 py-3 flex items-center gap-1.5 shadow-sm">
+          <span class="w-1.5 h-1.5 rounded-full bg-ssipsOrange typing-dot"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-ssipsOrange typing-dot"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-ssipsOrange typing-dot"></span>
+        </div>
+      `;
+      chatMessages.appendChild(typingDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function removeTyping() {
+      const el = document.getElementById('typingIndicator');
+      if (el) el.remove();
+    }
+
+    async function handleUserQuery(text) {
+      if (!text.trim()) return;
+      appendMessage(text, 'user');
+      chatInput.disabled = true;
+      sendBtn.disabled = true;
+      showTyping();
+
+      try {
+        const aiHtml = await fetchAIResponse(text);
+        removeTyping();
+        appendMessage(aiHtml, 'bot');
+      } catch (err) {
+        setTimeout(() => {
+          removeTyping();
+          const fallbackHtml = getSmartFallbackResponse(text);
+          appendMessage(fallbackHtml, 'bot');
+        }, 400);
+      } finally {
+        chatInput.disabled = false;
+        sendBtn.disabled = false;
+        chatInput.focus();
+      }
+    }
+
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = chatInput.value;
+      chatInput.value = '';
+      handleUserQuery(val);
+    });
+
+    function askQuickQuestion(question) {
+      document.getElementById('ai-counselor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      handleUserQuery(question);
+    }
+
+    function resetChat() {
+      conversationHistory = [];
+      chatMessages.innerHTML = '';
+      appendMessage(`<strong>Chat Reset!</strong> How can I assist you with admissions, courses, fees, or campus life at <strong>SSIPS Mujgahan, Raipur</strong> today?`, 'bot');
+    }
+
+    // Filter Programs
+    function filterPrograms(level, btn) {
+      document.querySelectorAll('.prog-filter').forEach(b => {
+        b.classList.remove('bg-emeraldDeep', 'text-white');
+        b.classList.add('text-stone-600');
+      });
+      btn.classList.add('bg-emeraldDeep', 'text-white');
+      btn.classList.remove('text-stone-600');
+
+      document.querySelectorAll('.program-card').forEach(card => {
+        if (level === 'all' || card.dataset.level === level) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Pre-fill course in Enquiry Form
+    function selectCourseForEnquiry(courseName) {
+      const select = document.getElementById('courseSelect');
+      select.value = courseName;
+      document.getElementById('enquiry-form').scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('studentName').focus();
+    }
+
+    // Handle Admission Enquiry Form Submission
+    const admissionForm = document.getElementById('admissionEnquiryForm');
+    const confirmBox = document.getElementById('enquiryConfirmation');
+
+    admissionForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('studentName').value.trim();
+      const phone = document.getElementById('studentPhone').value.trim();
+      const course = document.getElementById('courseSelect').value;
+      const city = document.getElementById('studentCity').value.trim();
+      const refId = 'SSIPS-' + Math.floor(100000 + Math.random() * 900000);
+
+      document.getElementById('confirmTitle').textContent = `Thank you, ${name}!`;
+      document.getElementById('confirmBody').innerHTML = `
+        Your admission enquiry for <strong>${course}</strong> from <strong>${city}</strong> has been logged with Reference ID <span class="px-2 py-0.5 rounded bg-white/15 font-mono font-bold text-amber-300">${refId}</span>.<br/><br/>
+        Our counselor at <strong>Shri Shankaracharya Institute of Professional Studies, Mujgahan, Raipur</strong> will reach out on <strong>+91 ${phone}</strong> shortly.
+      `;
+
+      admissionForm.classList.add('hidden');
+      confirmBox.classList.remove('hidden');
+    });
+
+    function resetEnquiryForm() {
+      admissionForm.reset();
+      confirmBox.classList.add('hidden');
+      admissionForm.classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
